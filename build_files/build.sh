@@ -24,9 +24,9 @@ dnf5 install --skip-unavailable -y waybar hyprpaper dolphin dunst pavucontrol hy
 # dnf5 -y copr disable ublue-os/staging
 
 # install ghostty: https://ghostty.org/docs/install/binary
-dnf5 -y copr enable pgdev/ghostty
-dnf5 -y install ghostty
-dnf5 -y copr disable pgdev/ghostty
+# dnf5 -y copr enable pgdev/ghostty
+# dnf5 -y install ghostty
+# dnf5 -y copr disable pgdev/ghostty
 
 #### Example for enabling a System Unit File
 
