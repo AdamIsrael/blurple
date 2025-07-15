@@ -10,11 +10,12 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux
+dnf5 install -y tmux the_silver_searcher ripgrep
+
 
 # hyprland
 dnf5 install -y hyprland
-dnf5 install --skip-unavailable -y waybar hyprpaper dolphin dunst pavucontrol hypridle hyprlock
+dnf5 install --skip-unavailable -y waybar hyprpaper dolphin dunst pavucontrol hypridle hyprlock kitty
 
 # Use a COPR Example:
 #
@@ -28,9 +29,10 @@ dnf5 -y copr enable scottames/ghostty
 dnf5 -y install ghostty
 dnf5 -y copr disable scottames/ghostty
 
-# dnf5 -y copr enable pgdev/ghostty
-# dnf5 -y install ghostty
-# dnf5 -y copr disable pgdev/ghostty
+# Tailscale
+curl https://pkgs.tailscale.com/stable/fedora/tailscale.repo -o /etc/yum.repos.d/tailscale.repo
+dnf5 install -y tailscale
+systemctl enable tailscaled
 
 #### Example for enabling a System Unit File
 
