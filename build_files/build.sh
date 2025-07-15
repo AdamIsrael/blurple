@@ -15,7 +15,7 @@ dnf5 install -y tmux the_silver_searcher ripgrep
 
 # hyprland
 dnf5 install -y hyprland
-dnf5 install --skip-unavailable -y waybar hyprpaper dolphin dunst pavucontrol hypridle hyprlock kitty
+dnf5 install --skip-unavailable -y waybar hyprpaper dolphin dunst pavucontrol hypridle hyprlock kitty rofi-wayland
 
 # Use a COPR Example:
 #
