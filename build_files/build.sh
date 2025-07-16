@@ -17,6 +17,9 @@ dnf5 install -y tmux the_silver_searcher ripgrep
 dnf5 install -y hyprland
 dnf5 install --skip-unavailable -y waybar hyprpaper dolphin dunst pavucontrol hypridle hyprlock kitty rofi-wayland
 
+# We're going to layer firefox so that we can natively integrate with the 1password application
+dnf install -y firefox
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
