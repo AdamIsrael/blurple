@@ -18,7 +18,11 @@ dnf5 install -y hyprland
 dnf5 install --skip-unavailable -y waybar hyprpaper dolphin dunst pavucontrol hypridle hyprlock kitty rofi-wayland
 
 # We're going to layer firefox so that we can natively integrate with the 1password application
-dnf install -y firefox
+dnf5 install -y firefox
+
+# Install Dropbox
+curl -L https://www.dropbox.com/download?dl=packages/fedora/nautilus-dropbox-2025.05.20-1.fc42.x86_64.rpm -o nautilus-dropbox-2025.05.20-1.fc42.x86_64.rpm
+dnf5 -y install nautilus-dropbox-2025.05.20-1.fc42.x86_64.rpm
 
 # Use a COPR Example:
 #
