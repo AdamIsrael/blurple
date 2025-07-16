@@ -14,9 +14,13 @@ dnf5 install -y tmux the_silver_searcher ripgrep glow
 
 # hyprland
 dnf5 install -y hyprland
-dnf5 install --skip-unavailable -y waybar hyprpaper dolphin dunst pavucontrol hypridle hyprlock kitty rofi-wayland
+dnf5 install --skip-unavailable -y waybar hyprpaper dolphin dunst pavucontrol hypridle hyprlock kitty rofi-wayland mako
 
+# Applets
 dnf5 install -y blueman network-manager-applet
+
+# Hardware-related tools
+dnf5 install -y brightnessctl fprintd fprintd-pam
 
 # We're going to layer firefox so that we can natively integrate with the 1password application
 dnf5 install -y firefox
