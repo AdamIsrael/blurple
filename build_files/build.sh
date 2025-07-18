@@ -49,6 +49,18 @@ curl https://pkgs.tailscale.com/stable/fedora/tailscale.repo -o /etc/yum.repos.d
 dnf5 install -y tailscale
 systemctl enable tailscaled
 
+# 1Password
+cat > /etc/yum.repos.d/1password.repo << EOF
+[1password]
+name=1Password Stable Channel
+baseurl=https://downloads.1password.com/linux/rpm/stable/\$basearch
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey="https://downloads.1password.com/linux/keys/1password.asc"
+EOF
+# dnf5 install -y 1password
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
