@@ -10,6 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
+# TODO(ami): install these via brew post-boot?
 dnf5 install -y tmux the_silver_searcher ripgrep glow
 
 # hyprland
@@ -43,6 +44,11 @@ dnf5 -y install nautilus-dropbox-2025.05.20-1.fc42.x86_64.rpm
 dnf5 -y copr enable scottames/ghostty
 dnf5 -y install ghostty
 dnf5 -y copr disable scottames/ghostty
+
+# lazygit
+dnf -y copr enable dejan/lazygit
+dnf -y install lazygit
+dnf -y copr disable dejan/lazygit
 
 # Tailscale
 curl https://pkgs.tailscale.com/stable/fedora/tailscale.repo -o /etc/yum.repos.d/tailscale.repo
