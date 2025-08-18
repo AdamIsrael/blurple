@@ -11,7 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 # TODO(ami): install these via brew post-boot?
-dnf5 install -y tmux the_silver_searcher ripgrep glow
+dnf5 install -y tmux the_silver_searcher ripgrep glow alacritty
 
 # hyprland
 # some packages (hyprpaper) are no longer available in fedora 42, so trying this copr instead
