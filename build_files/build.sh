@@ -67,9 +67,13 @@ repo_gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/1password.asc
 EOF
 
-mkdir -p /opt/1Password
-
-dnf5 install -y 1password 1password-cli
+# Installing 1Password fails with:
+#
+# + mkdir -p /opt/1Password
+# mkdir: cannot create directory '/opt': File exists
+# is there a file named opt that's blocking us?
+#mkdir -p /opt/1Password
+#dnf5 install -y 1password 1password-cli
 
 # Install vulkan driver
 dnf5 install -y mesa-vulkan-drivers
