@@ -66,7 +66,12 @@ gpgcheck=1
 repo_gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/1password.asc
 EOF
+
+mkdir /opt
 dnf5 install -y 1password 1password-cli
+
+# Install vulkan driver
+dnf5 install -y mesa-vulkan-drivers
 
 #### Example for enabling a System Unit File
 
