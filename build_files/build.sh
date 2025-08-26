@@ -67,7 +67,8 @@ repo_gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/1password.asc
 EOF
 
-mkdir /opt
+mkdir -p /opt/1Password
+
 dnf5 install -y 1password 1password-cli
 
 # Install vulkan driver
