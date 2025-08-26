@@ -50,10 +50,10 @@ dnf -y copr enable dejan/lazygit
 dnf -y install lazygit
 dnf -y copr disable dejan/lazygit
 
-# Tailscale
-curl https://pkgs.tailscale.com/stable/fedora/tailscale.repo -o /etc/yum.repos.d/tailscale.repo
-dnf5 install -y tailscale
-systemctl enable tailscaled
+# Tailscale - 26 Aug 2025 -- seems to be installed upstream now
+#curl https://pkgs.tailscale.com/stable/fedora/tailscale.repo -o /etc/yum.repos.d/tailscale.repo
+#dnf5 install -y tailscale
+#systemctl enable tailscaled
 
 # 1Password
 curl https://downloads.1password.com/linux/keys/1password.asc -o /etc/pki/rpm-gpg/1password.asc
@@ -74,9 +74,6 @@ EOF
 # is there a file named opt that's blocking us?
 #mkdir -p /opt/1Password
 #dnf5 install -y 1password 1password-cli
-
-# Install vulkan driver
-dnf5 install -y mesa-vulkan-drivers
 
 #### Example for enabling a System Unit File
 
