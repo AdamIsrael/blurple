@@ -66,7 +66,7 @@ gpgcheck=1
 repo_gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/1password.asc
 EOF
-# dnf5 install -y 1password
+dnf5 install -y 1password 1password-cli
 
 #### Example for enabling a System Unit File
 
