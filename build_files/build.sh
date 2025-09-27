@@ -75,6 +75,11 @@ EOF
 #mkdir -p /opt/1Password
 #dnf5 install -y 1password 1password-cli
 
+# Install cosmic desktop
+dnf5 -y copr enable ryanabx/cosmic-epoch
+dnf5 -y install cosmic-desktop
+dnf5 -y copr disable ryanabx/cosmic-epoch
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
