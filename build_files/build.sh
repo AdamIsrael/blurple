@@ -80,6 +80,12 @@ dnf5 -y copr enable ryanabx/cosmic-epoch
 dnf5 -y install cosmic-desktop
 dnf5 -y copr disable ryanabx/cosmic-epoch
 
+# Install some applet(s)
+dnf5 -y copr enable wiiznokes/cosmic-applets-unofficial 
+dnf5 -y install cosmic-ext-applet-ollama
+dnf5 -y install cosmic-ext-applet-minimon
+dnf5 -y copr disable wiiznokes/cosmic-applets-unofficial
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
