@@ -15,10 +15,10 @@ dnf5 install -y tmux the_silver_searcher ripgrep glow alacritty
 
 # hyprland
 # some packages (hyprpaper) are no longer available in fedora 42, so trying this copr instead
-dnf5 -y copr enable solopasha/hyprland
-dnf5 install -y hyprland
-dnf5 install --skip-unavailable -y waybar hyprpaper dolphin dunst pavucontrol hypridle hyprlock kitty rofi-wayland mako
-dnf5 -y copr disable solopasha/hyprland
+# dnf5 -y copr enable solopasha/hyprland
+# dnf5 install -y hyprland
+# dnf5 install --skip-unavailable -y waybar hyprpaper dolphin dunst pavucontrol hypridle hyprlock kitty rofi-wayland mako
+# dnf5 -y copr disable solopasha/hyprland
 
 # Applets
 dnf5 install -y blueman network-manager-applet
@@ -81,7 +81,7 @@ dnf5 -y install cosmic-desktop
 dnf5 -y copr disable ryanabx/cosmic-epoch
 
 # Install some applet(s)
-dnf5 -y copr enable wiiznokes/cosmic-applets-unofficial 
+dnf5 -y copr enable wiiznokes/cosmic-applets-unofficial
 dnf5 -y install cosmic-ext-applet-ollama
 dnf5 -y install cosmic-ext-applet-minimon
 dnf5 -y copr disable wiiznokes/cosmic-applets-unofficial
