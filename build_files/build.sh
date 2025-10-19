@@ -75,6 +75,10 @@ EOF
 #mkdir -p /opt/1Password
 #dnf5 install -y 1password 1password-cli
 
+# disable uupd (for testing of renovatio
+rm /usr/lib/systemd/system/uupd.service
+
+
 # Install cosmic desktop
 dnf5 -y copr enable ryanabx/cosmic-epoch
 dnf5 -y install cosmic-desktop
