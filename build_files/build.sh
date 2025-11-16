@@ -33,6 +33,10 @@ dnf5 install -y firefox
 curl -L https://www.dropbox.com/download?dl=packages/fedora/nautilus-dropbox-2025.05.20-1.fc42.x86_64.rpm -o nautilus-dropbox-2025.05.20-1.fc42.x86_64.rpm
 dnf5 -y install nautilus-dropbox-2025.05.20-1.fc42.x86_64.rpm
 
+# Install MySQL Workbench
+curl -L https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.44-1.el9.x86_64.rpm -l mysql-workbench.rpm
+dnf -y install mysql-workbench.rpm
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
