@@ -30,8 +30,8 @@ dnf5 install -y brightnessctl fprintd fprintd-pam
 dnf5 install -y firefox
 
 # Install Dropbox
-curl -L https://www.dropbox.com/download?dl=packages/fedora/nautilus-dropbox-2025.05.20-1.fc42.x86_64.rpm -o nautilus-dropbox-2025.05.20-1.fc42.x86_64.rpm
-dnf5 -y install nautilus-dropbox-2025.05.20-1.fc42.x86_64.rpm
+curl -L https://www.dropbox.com/download?dl=packages/fedora/nautilus-dropbox-2026.01.15-1.fc43.x86_64.rpm -o nautilus-dropbox-2026.01.15-1.fc43.x86_64.rpm
+dnf5 -y install nautilus-dropbox-2026.01.15-1.fc43.x86_64.rpm
 
 # Install MySQL Workbench
 dnf5 -y copr enable gui1ty/mysql-workbench-community
