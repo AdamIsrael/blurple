@@ -30,7 +30,7 @@ dnf5 install -y brightnessctl fprintd fprintd-pam
 dnf5 install -y firefox
 
 # Install Dropbox
-curl -L https://linux.dropbox.com/fedora/44/x86_64/nautilus-dropbox-2026.05.06-1.fc44.x86_64.rpm -o nautilus-dropbox-2026.05.06-1.fc44.x86_64.rpm
+curl -L https://linux.dropbox.com/fedora/45/x86_64/nautilus-dropbox-2026.05.06-1.fc44.x86_64.rpm -o nautilus-dropbox-2026.05.06-1.fc44.x86_64.rpm
 dnf5 -y install nautilus-dropbox-2026.05.06-1.fc44.x86_64.rpm
 
 # curl -L https://www.dropbox.com/download?dl=packages/fedora/nautilus-dropbox-2026.01.15-1.fc43.x86_64.rpm -o nautilus-dropbox-2026.01.15-1.fc43.x86_64.rpm
