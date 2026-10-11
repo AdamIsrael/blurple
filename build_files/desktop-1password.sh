@@ -97,21 +97,9 @@ chmod 4755 /usr/lib/1Password/chrome-sandbox
 BROWSER_SUPPORT_PATH="/usr/lib/1Password/1Password-BrowserSupport"
 
 
-# Add .desktop file and icons
-if [ -d /usr/share/applications ]; then
-  # xdg-desktop-menu will only be available if xdg-utils is installed, which is likely but not guaranteed
-  if [ -n "$(which xdg-desktop-menu)" ]; then
-    xdg-desktop-menu install --mode system --novendor /usr/lib/1Password/resources/1password.desktop
-    xdg-desktop-menu forceupdate
-  else
-    install -m0644 /usr/lib/1Password/resources/1password.desktop /usr/share/applications
-  fi
-fi
-if [ -d /usr/share/icons ]; then
-  cp -rf /usr/lib/1Password/resources/icons/* /usr/share/icons/
-  # Update icon cache
-  gtk-update-icon-cache -f -t /usr/share/icons/hicolor/
-fi
+# As of 8.12.36 the RPM ships its .desktop files and icons directly in
+# /usr/share/applications and /usr/share/icons, so there is no need to
+# install them from /usr/lib/1Password/resources.
 
 chgrp "${GID_ONEPASSWORD}" "${BROWSER_SUPPORT_PATH}"
 chmod g+s "${BROWSER_SUPPORT_PATH}"
