@@ -62,30 +62,15 @@ dnf -y copr enable dejan/lazygit
 dnf -y install lazygit
 dnf -y copr disable dejan/lazygit
 
-# Downgrade mutter - 20 Nov 2025 - there seems to be a bug with the latest version
-# where control-alt-<arrow> will leave the arrow key in a weird state,
-# repeating the keystroke until interrupted
-# dnf5 -y downgrade mutter-49.1-1.fc43
-
-# Tailscale - 26 Aug 2025 -- seems to be installed upstream now
-#curl https://pkgs.tailscale.com/stable/fedora/tailscale.repo -o /etc/yum.repos.d/tailscale.repo
-#dnf5 install -y tailscale
-#systemctl enable tailscaled
+# claude-desktop
+curl -fsSL https://pkg.claude-desktop-debian.dev/rpm/claude-desktop-unofficial.repo -o /etc/yum.repos.d/claude-desktop-unofficial.repo
+dnf -y install claude-desktop-unofficial
 
 # 1Password
 /ctx/desktop-1password.sh
 
-# Installing 1Password fails with:
-#
-# + mkdir -p /opt/1Password
-# mkdir: cannot create directory '/opt': File exists
-# is there a file named opt that's blocking us?
-#mkdir -p /opt/1Password
-#dnf5 install -y 1password 1password-cli
-
 # disable uupd (for testing of renovatio
 rm /usr/lib/systemd/system/uupd.service
-
 
 # Install cosmic desktop
 dnf5 -y copr enable ryanabx/cosmic-epoch
