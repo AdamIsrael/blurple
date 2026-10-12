@@ -66,6 +66,11 @@ dnf -y copr disable dejan/lazygit
 curl -fsSL https://pkg.claude-desktop-debian.dev/rpm/claude-desktop-unofficial.repo -o /etc/yum.repos.d/claude-desktop-unofficial.repo
 dnf -y install claude-desktop-unofficial
 
+# fw-fanctrl: control the framework fan
+dnf -y copr enable tulilirockz/fw-fanctrl
+dnf -y install fw-fanctrl # if you just want ectool you can change this to fw-ectool
+dnf -y copr disable tulilirockz/fw-fanctrl
+
 # 1Password
 /ctx/desktop-1password.sh
 
